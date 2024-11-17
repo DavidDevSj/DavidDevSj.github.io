@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera - Administración</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="dark-theme">
+    <header class="header">
+        <h1>Cartelera Instituto</h1>
+    </header>
+
+    <main class="container">
+        <form id="news-form" class="form" action="guardar_noticia.php" method="POST" enctype="multipart/form-data">
+            <label for="title" class="label">Título:</label>
+            <input type="text" id="title" name="title" class="input" required>
+
+            <label for="content" class="label">Contenido:</label>
+            <textarea id="content" name="content" class="textarea" rows="5" required></textarea>
+
+            <label for="date" class="label">Fecha:</label>
+            <input type="date" id="date" name="date" class="input" required>
+
+            <label for="template" class="label">Elegir Plantilla:</label>
+            <select id="template" name="template" class="select" required>
+                <option value="">Seleccionar...</option>
+                <option value="template1">Plantilla 1</option>
+                <option value="template2">Plantilla 2 (con imagen)</option>
+            </select>
+
+            <div id="image-upload" class="image-upload">
+                <label for="image" class="label">Subir imagen:</label>
+                <input type="file" id="image" name="image" class="input" accept="image/*">
+            </div>
+
+            <button type="submit" class="button primary-button">Crear Noticia</button>
+        </form>
+
+        <div id="qr-code"></div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</body>
+</html>

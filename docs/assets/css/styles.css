@@ -1,0 +1,218 @@
+/* Estilo general para un tema oscuro */
+body.dark-theme {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+    margin: 0; /* Quitar márgenes para un mejor control */
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    box-sizing: border-box; /* Incluir padding y border en el total del ancho */
+}
+
+/* Agrega el nuevo estilo para el contenedor de noticias */
+.news-container {
+    max-height: 700px; /* Aumenta la altura máxima para mostrar más noticias */
+    overflow-y: auto; /* Mantiene el scroll si el contenido es más alto que el contenedor */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #444; /* Borde para separar del fondo */
+    border-radius: 5px; /* Esquinas redondeadas */
+    background-color: #2a2a2a; /* Fondo para el contenedor */
+}
+
+
+
+
+h1 {
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 2.5em; /* Tamaño de fuente mayor */
+}
+
+.form {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.label {
+    display: block;
+    margin-top: 10px;
+    color: #e1e1e1;
+}
+
+.input, .textarea, .select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #aaa;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.primary-button {
+    background-color: #28a745;
+}
+
+.primary-button:hover {
+    background-color: #218838;
+}
+
+.danger-button {
+    background-color: #dc3545;
+}
+
+.danger-button:hover {
+    background-color: #c82333;
+}
+
+.secondary-button {
+    background-color: #007bff;
+}
+
+.secondary-button:hover {
+    background-color: #0056b3;
+}
+
+.news-item {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #f1f1f1;
+    text-align: center; /* Centrar el texto */
+}
+
+.news-item img {
+    display: block;
+    margin: 10px auto; /* Centrar imágenes horizontalmente */
+    max-width: 100%;
+    border-radius: 4px;
+    
+}
+
+.qr-image {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.thumbnail-image {
+    max-width: 100%;
+    height: auto; /* Asegura que la imagen mantenga su proporción */
+    display: block; /* Asegura que la imagen no esté oculta */
+    margin: 10px 0; /* Espaciado alrededor de la imagen */
+}
+
+/* Estilos generales */
+.header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+.news-title {
+    font-size: 2em;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.news-content {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.news-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Disminuir tamaño de fuente en pantallas pequeñas */
+    }
+
+    .form {
+        padding: 10px; /* Reducir padding en formularios */
+    }
+
+    .news-title {
+        font-size: 1.5em; /* Disminuir tamaño de título */
+    }
+}
+
+@media (max-width: 400px) {
+    .button {
+        padding: 8px; /* Reducir padding en botones */
+        font-size: 0.9em; /* Disminuir tamaño de fuente en botones */
+    }
+
+    .carousel {
+        display: flex; /* Usar flexbox para centrar el contenido */
+        justify-content: center; /* Centrar el contenido horizontalmente */
+        align-items: center; /* Centrar el contenido verticalmente */
+        overflow: hidden; /* Ocultar el desbordamiento */
+        position: relative; /* Posicionar elementos hijos de manera relativa */
+        width: 100%; /* Asegúrate de que el carrusel ocupe todo el ancho */
+        margin: 0 auto; /* Esto ayuda a centrar el carrusel */
+    }
+    
+    .carousel-content {
+        display: flex; /* Usar flexbox para los elementos internos */
+        align-items: center; /* Centrar verticalmente los elementos */
+        transition: transform 0.5s ease; /* Animación suave para el movimiento */
+    }
+    
+    .carousel-item {
+        min-width: 300px; /* Asegúrate de que cada elemento tenga un ancho mínimo */
+        text-align: center; /* Centrar el texto dentro de cada elemento */
+        margin: 0 10px; /* Espaciado lateral */
+        display: flex; /* Usar flexbox en los items */
+        flex-direction: column; /* Colocar los elementos en columna */
+        align-items: center; /* Centrar el contenido horizontalmente */
+    }
+    
+    .carousel-item img {
+        max-width: 150px; /* Ajusta el tamaño de la imagen */
+        height: auto; /* Mantener la relación de aspecto */
+        margin-bottom: 10px; /* Añadir espacio debajo de la imagen */
+    }
+    
+}
